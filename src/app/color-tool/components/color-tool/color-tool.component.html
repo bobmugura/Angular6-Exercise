@@ -1,1 +1,17 @@
-<app-car-tool></app-car-tool>
+<header>
+  <h1>{{headerText}}</h1>
+</header>
+<ul>
+  <li *ngFor="let aColor of colors" [ngStyle]="{ color: aColor }">{{aColor}}</li>
+</ul>
+
+<form [formGroup]="colorForm">
+  {{colorForm.value | json}}
+  <div>
+    <label for="color-input">New Color:</label>
+    <input type="text" id="color-input" formControlName="colorInput" />
+  </div>
+  <button type="button" (click)="addColor()">Add Color</button>
+</form>
+
+<car-tool></car-tool>
