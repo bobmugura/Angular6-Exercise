@@ -10,20 +10,14 @@ export class ColorToolComponent implements OnInit {
 
   public headerText = 'Color Tool';
   public colors = ['red', 'green', 'blue'];
-  public colorForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.colorForm = this.fb.group({
-      colorInput: ['']
-    });
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  addColor() {
-    this.colors = this.colors.concat(this.colorForm.value.colorInput);
-    this.colorForm.reset();
+  addColor(color: string) {
+    this.colors = this.colors.concat(color);
   }
 
 }
