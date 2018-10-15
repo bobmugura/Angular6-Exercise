@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { ColorToolModule } from './color-tool/color-tool.module';
+import { CarToolModule } from './car-tool/car-tool.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ColorToolModule } from './color-tool/color-tool.module';
   imports: [
     BrowserModule,
     ColorToolModule,
+    CarToolModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

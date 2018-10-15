@@ -19,4 +19,12 @@ export class CarToolComponent implements OnInit {
   ngOnInit() {
   }
 
+  addCar(car: Car) {
+    const carToAdd = {
+      ...car,
+      id: Math.max(...this.cars.map(c => c.id)) + 1,
+    };
+
+    this.cars = [...this.cars, carToAdd];
+  }
 }
