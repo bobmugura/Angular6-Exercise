@@ -1,0 +1,15 @@
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Make</td>
+      <td>Model</td>
+      <td>Year</td>
+      <td>Color</td>
+      <td>Price</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="car-table-row" *ngFor="let car of cars" [car]="car"></tr>
+  </tbody>
+</table>
